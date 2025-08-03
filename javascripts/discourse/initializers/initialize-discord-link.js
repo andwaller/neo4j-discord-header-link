@@ -4,10 +4,18 @@ export default {
   name: "initialize-discord-link",
 
   initialize() {
+    console.log("✅ initialize-discord-link: initializer loaded");
+
     withPluginApi("1.2", api => {
       api.decorateWidget("header-icons:before", helper => {
         const username = helper.currentUser?.username;
-        if (!username) return;
+
+        if (!username) {
+          console.log("🚫 User not logged in, skipping Discord link");
+          return;
+        }
+
+        console.log(`✅ Rendering Discord button for: ${username}`);
 
         return helper.h("li.header-link-discord", [
           helper.h("a", {
