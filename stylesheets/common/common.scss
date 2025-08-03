@@ -1,0 +1,19 @@
+.header-link-discord {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.header-link-discord a {
+  padding: 0.25em 0.5em;
+  background: transparent;
+  color: var(--primary-high);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-link-discord svg {
+  margin-left: 2px;
+  fill: var(--primary-high);
+}
